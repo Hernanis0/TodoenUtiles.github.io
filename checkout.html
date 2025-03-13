@@ -82,28 +82,18 @@
         formulario.addEventListener("submit", function(event) {
             event.preventDefault(); // Evita el envío tradicional
 
-            // Obtén los valores de los campos del formulario
-            const nombre = document.getElementById("nombre").value;
-            const email = document.getElementById("email").value;
-            const telefono = document.getElementById("telefono").value;
-            const direccion = document.getElementById("direccion").value;
-            const ciudad = document.getElementById("ciudad").value;
-            const codigoPostal = document.getElementById("codigo-postal").value;
-            const producto = document.getElementById("producto").value;
-            const precio = document.getElementById("precio").value;
+            // Obtén los valores de los campos del formulario y codifica para la URL
+            const nombre = encodeURIComponent(document.getElementById("nombre").value);
+            const email = encodeURIComponent(document.getElementById("email").value);
+            const telefono = encodeURIComponent(document.getElementById("telefono").value);
+            const direccion = encodeURIComponent(document.getElementById("direccion").value);
+            const ciudad = encodeURIComponent(document.getElementById("ciudad").value);
+            const codigoPostal = encodeURIComponent(document.getElementById("codigo-postal").value);
+            const producto = encodeURIComponent(document.getElementById("producto").value);
+            const precio = encodeURIComponent(document.getElementById("precio").value);
 
-            // Muestra los datos capturados en la consola
-            console.log("Nombre:", nombre);
-            console.log("Correo:", email);
-            console.log("Teléfono:", telefono);
-            console.log("Dirección:", direccion);
-            console.log("Ciudad:", ciudad);
-            console.log("Código Postal:", codigoPostal);
-            console.log("Producto:", producto);
-            console.log("Precio:", precio);
-
-            // Redirige a la página de confirmación
-            window.location.href = "confirmacion.html";
+            // Redirige a confirmacion.html con los datos en la URL
+            window.location.href = `confirmacion.html?nombre=${nombre}&email=${email}&telefono=${telefono}&direccion=${direccion}&ciudad=${ciudad}&codigo-postal=${codigoPostal}&producto=${producto}&precio=${precio}`;
         });
     </script>
 </body>
