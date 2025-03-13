@@ -32,6 +32,46 @@
         }
     </style>
     <script>
+        // Función para obtener parámetros de la URL
+        function obtenerParametros() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                nombre: params.get("nombre"),
+                email: params.get("email"),
+                telefono: params.get("telefono"),
+                direccion: params.get("direccion"),
+                ciudad: params.get("ciudad"),
+                codigoPostal: params.get("codigo-postal"),
+                producto: params.get("producto"),
+                precio: params.get("precio"),
+            };
+        }
+
+        // Función para mostrar los datos en la página
+        function mostrarDatos() {
+            const datos = obtenerParametros();
+            if (datos.nombre && datos.email) {
+                document.querySelector(".message-container").innerHTML = `
+                    <h1>¡Gracias por tu compra, ${datos.nombre}!</h1>
+                    <p>Tu pedido del producto <strong>${datos.producto}</strong> por <strong>${datos.precio}</strong> ha sido procesado con éxito.</p>
+                    <p>Hemos enviado un correo de confirmación a: <strong>${datos.email}</strong>.</p>
+                    <p>Será entregado en la dirección: <strong>${datos.direccion}, ${datos.ciudad}, ${datos.codigoPostal}</strong>.</p>
+                    <p>Si no eres redirigido automáticamente, haz clic en el botón de abajo.</p>
+                    <a href="index.html" class="btn btn-primary mt-3">Volver al inicio</a>
+                `;
+            } else {
+                document.querySelector(".message-container").innerHTML = `
+                    <h1>¡Gracias por tu compra!</h1>
+                    <p>Tu pedido ha sido procesado con éxito.</p>
+                    <p>Si no eres redirigido automáticamente, haz clic en el botón de abajo.</p>
+                    <a href="index.html" class="btn btn-primary mt-3">Volver al inicio</a>
+                `;
+            }
+        }
+
+        // Llama a mostrarDatos al cargar la página
+        window.onload = mostrarDatos;
+
         // Redirige automáticamente al index.html después de 10 segundos
         setTimeout(function() {
             window.location.href = "index.html";
@@ -40,10 +80,7 @@
 </head>
 <body>
     <div class="message-container">
-        <h1>¡Gracias por tu compra!</h1>
-        <p>Tu pedido ha sido procesado con éxito. Serás redirigido a la página de inicio en breve.</p>
-        <p>Si no eres redirigido automáticamente, haz clic en el botón de abajo.</p>
-        <a href="index.html" class="btn btn-primary mt-3">Volver al inicio</a>
+        <!-- Los datos personalizados se insertarán aquí mediante JavaScript -->
     </div>
 </body>
 </html>
