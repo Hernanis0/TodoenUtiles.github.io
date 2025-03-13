@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Todo en Útiles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Todo en Útiles</h1>
+        <p>Finaliza tu compra de manera segura y rápida</p>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center mb-4">Formulario de Compra</h2>
+                <form action="confirmacion.html" method="POST" class="p-4 shadow-sm rounded bg-light">
+                    <!-- Información personal -->
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
+                    </div>
+
+                    <!-- Dirección de envío -->
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección de Envío:</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ingresa tu dirección" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad:</label>
+                        <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ingresa tu ciudad" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="codigo-postal" class="form-label">Código Postal:</label>
+                        <input type="text" class="form-control" id="codigo-postal" name="codigo-postal" placeholder="Ingresa tu código postal" required>
+                    </div>
+
+                    <!-- Información del producto -->
+                    <div class="mb-3">
+                        <label for="producto" class="form-label">Producto Seleccionado:</label>
+                        <input type="text" class="form-control" id="producto" name="producto" value="Bolígrafo" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Precio:</label>
+                        <input type="text" class="form-control" id="precio" name="precio" value="$12,000 COP" readonly>
+                    </div>
+
+                    <!-- Botón para confirmar -->
+                    <button type="submit" class="btn btn-success w-100">Confirmar Compra</button>
+                </form>
+            </div>
+        </div>
+        <!-- Botón de regresar -->
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary">Regresar</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Todo en Útiles</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

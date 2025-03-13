@@ -1,0 +1,97 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Cambiado a una tipografía moderna */
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 2rem; /* Aumentado el padding para un diseño más espacioso */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 3px solid #007bff; /* Línea decorativa */
+}
+
+/* Carousel caption styles */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra de texto */
+}
+
+/* Carousel item transition */
+.carousel-item {
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Transición suave */
+}
+
+/* Button styles */
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    color: white;
+}
+
+/* Card styles */
+.card {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
+    border: none; /* Sin bordes para un diseño limpio */
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.card img {
+    border-bottom: 3px solid #007bff; /* Borde decorativo debajo de la imagen */
+}
+.card-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+/* Estilo del formulario */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+}
+form .form-label {
+    font-weight: bold;
+    color: #343a40;
+}
+form .form-control {
+    border-radius: 0.5rem;
+}
+form .btn-success {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+form .btn-success:hover {
+    background-color: #218838;
+}
+
+/* Espaciado para sección del botón de regresar */
+.text-center {
+    margin-top: 2rem;
+}
